@@ -1,0 +1,9 @@
+_target_: src.data.snopes_datamodule.SnopesDataModule
+data_dir: "./Snopes/add_label_snopes_4.pkl"
+batch_size: 1
+#train_val_test_split: [9255, 3085, 3085]
+train_val_test_split: [50, 25, 25]
+num_workers: 0
+pin_memory: False
+tokenizer: ".src/models/components/bert_tokenizer"
+num_classes: 2

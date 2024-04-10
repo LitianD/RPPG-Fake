@@ -1,0 +1,20 @@
+_target_: src.data.rl_user_datamodule.RlDataModule
+# data_dir: "/data/zlt/python_code/fake-news-baselines/data/after_deal_data/diffusion_train_data/politifact_user_id_train.csv"
+# data_dir: "/data/zlt/python_code/fake-news-baselines/data/after_deal_data/diffusion_train_data/gossipcop_user_id_train.csv"
+data_dir: "/data/zlt/python_code/fake-news-baselines/RL_data/politifact/news_actions_politifact.csv"
+# batch_size: 16
+batch_size: 4
+# train_val_test_split: [9255, 3085, 3085]
+
+# pol 484
+# train_val_test_split: [2, 2, 480]
+train_val_test_split: [340, 50, 94]
+
+# gos 197679
+# train_val_test_split: [138378, 19767, 39534]
+
+# pheme 73308
+# train_val_test_split: [51318, 7330, 14660]
+num_workers: 0
+pin_memory: False
+num_classes: 2

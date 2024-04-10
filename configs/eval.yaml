@@ -1,0 +1,26 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: pol_user_eval.yaml
+  #- model: mnist.yaml
+  - model: diffusion_eval.yaml
+  - logger: null
+  - trainer: default.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+task_name: "eval"
+
+tags: ["dev"]
+
+# passing checkpoint path is necessary for evaluation
+# pol
+# ckpt_path: /data/zlt/python_code/fake-news-baselines/logs/train_diffusion_pol/runs/2024-01-13_11-54-10/checkpoints/last.ckpt
+# gos
+# ckpt_path: /data/zlt/python_code/fake-news-baselines/logs/train_diffusion_gos/runs/2024-01-14_20-27-22/checkpoints/last.ckpt
+
+# pheme
+ckpt_path: /data/zlt/python_code/fake-news-baselines/logs/train_diffusion_pheme/runs/2024-01-18_10-35-45/checkpoints/last.ckpt
+
