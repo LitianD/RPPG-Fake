@@ -79,3 +79,17 @@ def cfg_eval(cfg_eval_global, tmp_path) -> DictConfig:
     yield cfg
 
     GlobalHydra.instance().clear()
+
+# this is called by each test which uses `cfg_eval` arg
+# each test generates its own temporary logging path
+@pytest.fixture(scope="function")
+def cfg_eval(cfg_eval_global, tmp_path) -> DictConfig:
+    cfg = cfg_eval_global.copy()
+
+    with open_dict(cfg):
+        cfg.paths.output_dir = str(tmp_path)
+        cfg.paths.log_dir = str(tmp_path)
+
+    yield cfg
+
+    GlobalHydra.instance().clear()
