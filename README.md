@@ -1,6 +1,6 @@
 <!-- <div align="center"> -->
 
-# Early Detection of Multimodal Fake News via Reinforced Propagation Path imulation
+# Early Detection of Multimodal Fake News via Reinforced Propagation Path Generation
 
 ## Project Structure
 
